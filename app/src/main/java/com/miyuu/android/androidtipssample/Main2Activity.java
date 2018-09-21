@@ -26,6 +26,8 @@ public class Main2Activity extends AppCompatActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //画像を表示させる
+                //imageView.setImageResource(画像のID)
                 mImageView.setImageResource(R.drawable.rabbit);
             }
         });

@@ -36,7 +36,9 @@ public class Main3Activity extends AppCompatActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //EditTextに入力された内容を取得してString型の変数textに代入
                 String text = mEditText.getText().toString();
+                //TextViewに↑のtextを表示させる
                 mTextView.setText(text);
             }
         });
@@ -44,9 +46,13 @@ public class Main3Activity extends AppCompatActivity {
         mButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //ボタンをクリックしたらダイアログを表示させる
+                //ダイアログを表示させるのに必要なFragmentマネージャを生成する
                 flagmentManager = getSupportFragmentManager();
+                //フラグメント用のクラスのインスタンスを作成
                 dialogFragment = new DialogFragment();
-                dialogFragment.show(flagmentManager, "test alert dialog");
+                //↑を使ってダイアログを表示させる
+                dialogFragment.show(flagmentManager, "dialog");
             }
         });
 

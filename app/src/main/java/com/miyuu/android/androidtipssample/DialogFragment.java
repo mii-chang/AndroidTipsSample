@@ -14,22 +14,23 @@ public class DialogFragment extends android.support.v4.app.DialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
 
         Dialog dialog = new Dialog(getActivity());
-        // タイトル非表示
+        // タイトルを非表示に
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        // フルスクリーン
+        // フルスクリーンにする
         dialog.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_LAYOUT_IN_SCREEN);
         dialog.setContentView(R.layout.fragment_dialog);
         // 背景を透明にする
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-        // OK ボタンのリスナ
+        // OKボタンのリスナー
         dialog.findViewById(R.id.positive_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //ダイアログを閉じる処理
                 dismiss();
             }
         });
-        // Close ボタンのリスナ
+        // Closeボタンのリスナー
         dialog.findViewById(R.id.close_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
